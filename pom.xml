@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ nemesis Platform - NExt-generation Multichannel E-commerce SYStem
+  ~
+  ~ Copyright (c) 2010 - 2016 nemesis
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of nemesis
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with nemesis.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.nemesis</groupId>
+        <artifactId>bom</artifactId>
+        <version>2.2.3.BUILD-SNAPSHOT</version>
+    </parent>
+
+    <groupId>io.nemesis.platform</groupId>
+    <artifactId>nemesis-codegenerator-processor</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Nemesis Codegenerator Processor</name>
+    <description>Allows to configure the nemesis codegenerator</description>
+
+    <properties>
+        <project.directory>console</project.directory>
+        <maven.rat.plugin.skip>true</maven.rat.plugin.skip>
+        <frontend-plugin.version>1.8.0</frontend-plugin.version>
+        <node.version>v12.13.1</node.version>
+        <yarn.version>v1.19.2</yarn.version>
+        <webpack.build.parameter/>
+    </properties>
+
+    <scm>
+        <connection>scm:git:git@github.com:nemesis-software/nemesis-codegenerator-processor.git</connection>
+        <developerConnection>scm:git:git@github.com:nemesis-software/nemesis-codegenerator-processor.git</developerConnection>
+        <url>https://github.com/nemesis-software/nemesis-codegenerator-processor.git</url>
+        <tag>master</tag>
+    </scm>
+    <repositories>
+        <repository>
+            <id>nemesis-repository-releases</id>
+            <name>nemesis-repository-releases</name>
+            <url>https://repository.nemesis.io/artifactory/libs-release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>nemesis-repository-snapshots</id>
+            <name>nemesis-repository-snapshots</name>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <!-- The following we need only because if NEMESIS release of asciidoctor.-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nemesis-repository-plugins</id>
+            <name>nemesis-plugin-snapshots</name>
+            <url>https://repository.nemesis.io/artifactory/plugins-snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>nemesis-repository-snapshots</id>
+            <name>nemesis-repository-snapshots</name>
+            <url>https://repository.nemesis.io/artifactory/libs-snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>nemesis-repository-releases</id>
+            <name>nemesis-repository-release</name>
+            <url>https://repository.nemesis.io/artifactory/libs-release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-snapshot</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.nemesis.platform</groupId>
+            <artifactId>nemesis-platform-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>
